@@ -1,11 +1,13 @@
 import asyncio
 import logging
+
 from aiogram import Bot, Dispatcher
-from aiogram.enums import ParseMode
 from aiogram.client.default import DefaultBotProperties
+from aiogram.enums import ParseMode
 
 from config import BOT_TOKEN
-from handlers import basic, admin, monitor
+from handlers import admin, basic, monitor
+
 
 async def main():
     logging.basicConfig(level=logging.INFO)

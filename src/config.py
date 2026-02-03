@@ -7,6 +7,12 @@ BASE_DIR = Path(__file__).resolve().parent
 BOT_TOKEN = config("BOT_TOKEN", cast=str)
 DB_NAME = BASE_DIR / "data.db"
 
+db_path = config("DB_PATH", default=None)
+if db_path:
+    DB_NAME = Path(db_path)
+else:
+    DB_NAME = BASE_DIR / "data.db"
+
 
 LEET_COMBOS = {
     "bl": "ы",

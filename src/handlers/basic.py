@@ -1,9 +1,11 @@
 import os
-from aiogram import Router, Bot
+
+from aiogram import Bot, Router
 from aiogram.filters import Command
-from aiogram.types import Message, FSInputFile
-from database import Database
+from aiogram.types import FSInputFile, Message
+
 from config import DB_NAME
+from database import Database
 from utils.common import is_admin
 from utils.graphs import generate_stats_graph
 

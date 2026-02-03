@@ -1,6 +1,8 @@
-import matplotlib.pyplot as plt
 import asyncio
 import uuid
+
+import matplotlib.pyplot as plt
+
 
 def _create_plot(data):
     random_name = f'data_img_{uuid.uuid4()}.png'

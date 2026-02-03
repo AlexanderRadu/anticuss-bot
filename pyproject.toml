@@ -1,2 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "anticuss-bot"
+version = "0.1.0"
+description = "Telegram bot for chat moderation and anti-profanity"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "AlexanderRadu" }
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.ruff]
+src = ["src"]
+
+line-length = 88
+
+target-version = "py311"
+
+exclude = [
+    ".git",
+    ".venv",
+    "venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
 [tool.ruff.lint]
-extend-select = ["B"]
+select = ["E", "W", "F", "I", "B", "UP"]
+
+ignore = ["E501"]
+
+[tool.ruff.format]
+quote-style = "single"
+
+indent-style = "space"
+
+skip-magic-trailing-comma = false
+
+line-ending = "auto"

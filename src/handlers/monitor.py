@@ -1,12 +1,13 @@
 import re
-from aiogram import Router, F
-from aiogram.types import Message, ContentType
-from database import Database
-from config import DB_NAME, LEET_COMBOS, TRANSLATION_TABLE, WHITELIST, BASE_BAD_WORDS
-
 from contextlib import suppress
+
 import pymorphy3
+from aiogram import F, Router
+from aiogram.types import ContentType, Message
 from rapidfuzz import fuzz
+
+from config import BASE_BAD_WORDS, DB_NAME, LEET_COMBOS, TRANSLATION_TABLE, WHITELIST
+from database import Database
 
 router = Router()
 db = Database(DB_NAME)
