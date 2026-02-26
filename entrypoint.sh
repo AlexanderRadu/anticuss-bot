@@ -2,8 +2,8 @@
 
 if [ -z "$BOT_TOKEN" ]; then
     echo "====================================================================="
-    echo "ОШИБКА: Переменная окружения BOT_TOKEN не задана!"
-    echo "Пожалуйста, укажите её в файле .env или через параметры запуска."
+    echo "ERROR: The BOT_TOKEN environment variable is not set!"
+    echo "Please specify it in the file.env or via startup parameters."
     echo "====================================================================="
     exit 1
 fi
