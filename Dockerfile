@@ -10,6 +10,5 @@ RUN pip install --upgrade pip && \
 
 COPY . .
 RUN chmod +x /app/entrypoint.sh
-
 ENTRYPOINT ["/app/entrypoint.sh"]
 CMD ["python", "src/main.py"]
